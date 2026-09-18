@@ -1,5 +1,17 @@
 # backend
 
+## Run
+
+```
+go run .
+```
+
+## Build
+
+```
+go build
+```
+
 ## Configuration
 
 - `PORT` - port to listen on (default: `8000`)
