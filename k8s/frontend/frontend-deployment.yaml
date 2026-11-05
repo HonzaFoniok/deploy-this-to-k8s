@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-app-deployment
+  labels:
+    app: frontend-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend-app
+  template:
+    metadata:
+      labels:
+        app: frontend-app
+    spec:
+      containers:
+        - name: frontend-app
+          image: honzafoniok/frontend-app:v1
+          ports:
+            - containerPort: 3000
+          env: 
+            - name: API_ORIGIN
+              value: "http://backend-app-service:80"
+
