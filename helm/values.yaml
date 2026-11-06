@@ -1,0 +1,16 @@
+# image
+image:
+  repository: honzafoniok/frontend-app
+  tag: "v1"
+
+
+#api
+  API_ORIGIN: "http://backend-app-service:80"
+
+# ingress host
+ingress:
+  host:
+    - "frontend.100.83.180.2.nip.io"
+    - "frontend.192.168.1.27.nip.io"
+replicaCount: 3
+
