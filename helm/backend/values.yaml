@@ -1,0 +1,12 @@
+# image
+image: 
+  repository: honzafoniok/backend-app
+  tag: "v2"
+
+# redis
+redis:
+  host: "counter-redis-master"
+  port: 6379
+
+# replicas
+replicaCount: 4

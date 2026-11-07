@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: backend-app-deployment
+  labels:
+    app: backend-app
+spec:
+  replicas: {{.Values.replicaCount}}
+  selector:
+    matchLabels:
+      app: backend-app
+  template:
+    metadata:
+      labels:
+        app: backend-app
+    spec:
+      containers:
+        - name: backend-app
+          image: "{{.Values.repository}}:{{.Values.tag}}"
+          ports:
+            - containerPort: 8000
+          env:
+            - name: redis
+              value: "{{.Values.redis.host}}:{{.Values.redis.port}}"
