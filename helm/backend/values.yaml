@@ -1,7 +1,7 @@
 # image
 image: 
   repository: honzafoniok/backend-app
-  tag: "v2"
+  tag: v2
 
 # redis
 redis:
