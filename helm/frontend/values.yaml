@@ -10,7 +10,9 @@ image:
 # ingress host
 ingress:
   host:
-    - "frontend.100.83.180.2.nip.io"
-    - "frontend.192.168.1.27.nip.io"
+    - "frontend-helm.100.83.180.2.nip.io"
+    - "frontend-helm.192.168.1.27.nip.io"
+
+# replicas
 replicaCount: 3
 
