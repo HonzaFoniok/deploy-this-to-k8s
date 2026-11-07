@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend-app
-          image: "{{.Values.repository}}:{{.Values.tag}}"
+          image: "{{.Values.image.repository}}:{{.Values.image.tag}}"
           ports:
             - containerPort: 8000
           env:
