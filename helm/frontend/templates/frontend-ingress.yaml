@@ -2,8 +2,16 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: frontend-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt"
 spec:
-  rules: 
+  tls:
+    - hosts:
+        {{- range .Values.ingress.host}}
+        - {{ . }}
+        {{- end}}
+      secretName: frontend-ingress-tls
+  rules:
     {{- range .Values.ingress.host}}
       - host: {{ . }}
         http:
@@ -13,6 +21,6 @@ spec:
               backend:
                 service:
                   name: frontend-app-service
-                  port: 
+                  port:
                     number: 80
     {{- end}}
