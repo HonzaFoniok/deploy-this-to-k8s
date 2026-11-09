@@ -4,9 +4,6 @@ image:
   tag: "v1"
 
 
-#api
-  API_ORIGIN: "http://backend-app-service:80"
-
 # ingress host
 ingress:
   host:
