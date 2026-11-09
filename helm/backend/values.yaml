@@ -6,7 +6,6 @@ image:
 # redis
 redis:
   host: "counter-redis-helm-master"
-  port: 6379
 
 # replicas
 replicaCount: 4
