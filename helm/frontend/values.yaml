@@ -5,9 +5,10 @@ image:
 
 
 # ingress host
-ingress:
-  host:
-    - "frontend-helm.fuf.sikademo.com"
+# ingressHosts:
+#     - "frontend-helm.fuf.sikademo.com"
+#     - "frontend-helm-2.fuf.sikademo.com"
+ingressHosts: []
 
 # replicas
 replicaCount: 3

@@ -7,12 +7,12 @@ metadata:
 spec:
   tls:
     - hosts:
-        {{- range .Values.ingress.host}}
+        {{- range .Values.ingressHosts}}
         - {{ . }}
         {{- end}}
       secretName: frontend-ingress-tls
   rules:
-    {{- range .Values.ingress.host}}
+    {{- range .Values.ingressHosts}}
       - host: {{ . }}
         http:
           paths:
